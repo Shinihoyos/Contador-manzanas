@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad - Suma de manzanas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <main class="actividad">
+        <h1>🍎 Suma de manzanas</h1>
+
+        <p id="instruccion">Cuenta las manzanas de cada grupo y completa la suma.</p>
+
+        <section class="suma">
+
+            <div id="contenedor1" class="contenedor"></div>
+
+            <div class="signo">+</div>
+
+            <div id="contenedor2" class="contenedor"></div>
+
+            <div class="signo">=</div>
+
+            <div
+                id="resultado"
+                class="resultado"
+                ondragover="permitirSoltar(event)"
+                ondrop="soltarManzana(event)">
+            </div>
+
+        </section>
+
+        <section class="zona-modelo">
+            <p>Arrastra una manzana al resultado:</p>
+
+            <div
+                id="manzanaModelo"
+                class="manzana-modelo"
+                draggable="true"
+                ondragstart="comenzarArrastre(event)">
+            </div>
+        </section>
+
+        <section class="botones">
+            <button id="btnNuevaSuma">Nueva suma</button>
+            <button id="btnVerificar">Verificar resultado</button>
+        </section>
+
+        <p id="mensaje" aria-live="polite"></p>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
